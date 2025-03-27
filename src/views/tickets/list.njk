@@ -1,0 +1,21 @@
+{% extends "layouts/main.njk" %}
+
+{% block content %}
+    <h1>Lista de Tickets</h1>
+    {% if tickets.length > 0 %}
+        <ul>
+            {% for ticket in tickets %}
+                <li>
+                    fecha creación: {{ ticket.fecha_crea_t }}<br>
+                    estado: {{ ticket.estado_ticket.estado_ticket }}<br>
+                    Creador: {{ ticket.nombre_creador }}<br>
+                    <a href="/tickets/detail/{{ ticket.id_ticket }}">Ver Detalles</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay tickets</p>
+    {% endif %}
+{% endblock %}
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registrarse</title>
+        <!-- Incluye Bootstrap CSS -->
+        <link
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!-- Incluye Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Incluye el archivo CSS personalizado -->
+        <link href="/css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="mt-5 glitch" data-text="Registrarse">Registrarse</h1>
+            <form action="/auth/register" method="post" class="mt-4">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Registrarse!</button>
+            </form>
+            <!-- Mueve el elemento canvas para la animación del corazón al final -->
+            <div class="text-center mt-4">
+                <canvas id="heartCanvas" width="100" height="100"></canvas>
+            </div>
+        </div>
+        <!-- Agrega el footer -->
+        <footer class="text-center mt-4">
+            <p>MMXXV - Juan M. Bonomo</p>
+        </footer>
+        <!-- Incluye Bootstrap JS y dependencias -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Agrega el script para la animación del corazón -->
+        <script src="/js/heartAnimation.js"></script>
+    </body>
+</html>

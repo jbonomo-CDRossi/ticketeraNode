@@ -1,0 +1,26 @@
+{% extends "layouts/main.njk" %}
+
+{% block content %}
+    <h1>Detalle del Ticket</h1>
+    <p><u>Email del Creador:</u> {{ ticket.email_creador }}</p>
+    <p><u>Fecha de Creación:</u> {{ ticket.fecha_crea_t }}</p>
+    <p><u>Estado:</u> {{ ticket.estado_ticket.estado_ticket }}</p>
+    
+    {% if ticket.fecha_termi_t %}
+        <p><u>Fecha de Terminado:</u> {{ ticket.fecha_termi_t }}</p>
+    {% endif %}
+
+    
+    <p><u>Usuario Encargado:</u> 
+        {% if ticket.usuario_encargado %}
+            {{ ticket.usuario_encargado }}
+        {% else %}
+            Se debe Asignar
+        {% endif %}
+    </p>
+    <p><u>Evidencia:</u> {{ ticket.evidencia }}</p>
+    <p><u>ID R34:</u> {{ ticket.id_r34 }}</p>
+    <p><u>Detalle del Pedido:</u> {{ ticket.det_pedido }}</p>
+    <p><u>Nombre del Creador:</u> {{ ticket.nombre_creador }}</p>
+    <a href="/tickets/list">Volver a la lista de tickets</a>
+{% endblock %}

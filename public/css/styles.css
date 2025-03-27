@@ -1,0 +1,168 @@
+/* filepath: c:\Users\JBONOMO\Documents\TicketeraNode\public\css\styles.css */
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: black; /* Fondo negro */
+    color: white; /* Letras blancas */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+.content {
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-weight: 700; /* Negrita */
+    color: white; /* Letras blancas */
+}
+
+p, label, input, button {
+    font-family: 'Press Start 2P', sans-serif;
+    font-weight: 400; /* Normal */
+    color: white; /* Letras blancas */
+}
+
+input, button {
+    background-color: black; /* Fondo negro */
+    border: 1px solid white; /* Borde blanco */
+}
+
+.glitch {
+    position: relative;
+    color: white;
+    font-size: 2em;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    animation: glitch 1s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 red;
+    animation: glitch-before 1s infinite;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 blue;
+    animation: glitch-after 1.5s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        transform: none;
+    }
+    20% {
+        transform: translateX(-2px);
+    }
+    40% {
+        transform: translateX(2px);
+    }
+    60% {
+        transform: translateX(-2px);
+    }
+    80% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes glitch-before {
+    0% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: translateX(2px);
+    }
+    20% {
+        clip: rect(12px, 9999px, 14px, 0);
+        transform: translateX(-2px);
+    }
+    40% {
+        clip: rect(82px, 9999px, 84px, 0);
+        transform: translateX(2px);
+    }
+    60% {
+        clip: rect(52px, 9999px, 54px, 0);
+        transform: translateX(-2px);
+    }
+    80% {
+        clip: rect(22px, 9999px, 24px, 0);
+        transform: translateX(2px);
+    }
+    100% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: translateX(-2px);
+    }
+}
+
+@keyframes glitch-after {
+    0% {
+        clip: rect(82px, 9999px, 84px, 0);
+        transform: translateX(-2px);
+    }
+    20% {
+        clip: rect(52px, 9999px, 54px, 0);
+        transform: translateX(2px);
+    }
+    40% {
+        clip: rect(22px, 9999px, 24px, 0);
+        transform: translateX(-2px);
+    }
+    60% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: translateX(2px);
+    }
+    80% {
+        clip: rect(12px, 9999px, 14px, 0);
+        transform: translateX(-2px);
+    }
+    100% {
+        clip: rect(82px, 9999px, 84px, 0);
+        transform: translateX(2px);
+    }
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
